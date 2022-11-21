@@ -48,7 +48,7 @@ if delta > 0:
 else:
     sign = "⬇️"
 
-if abs(delta) > 1:
+if abs(delta) > 5:
     client = Client(account_sid, auth_token)
     message = client.messages \
         .create(
