@@ -13,7 +13,7 @@ STOCK = "TSLA"
 COMPANY_NAME = "Tesla"
 
 # ------------------- Retrieve Stock Data -------------------
-av_api_key = 'Y8I9YRJW55WITA96'
+av_api_key = 'your_av_api_key'
 av_url = ("https://www.alphavantage.co/query?"
           "function=TIME_SERIES_DAILY_ADJUSTED&"
           f"symbol={STOCK}&"
@@ -27,7 +27,7 @@ second_close = float(list(av_data.values())[1]['4. close'])
 delta = (recent_close-second_close)/second_close * 100
 
 # ------------------- Retrieve News Data -------------------
-news_api_key = "412ede77796f4e378d7b65642e3682c5"
+news_api_key = "your_news_api_key"
 news_url = ('https://newsapi.org/v2/everything?'
             f'q={COMPANY_NAME}&'
             f'from={recent_date}&'
